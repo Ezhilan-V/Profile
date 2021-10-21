@@ -15,7 +15,6 @@ export class LandingComponent implements OnInit {
 
   ngOnInit() {
     var rellaxHeader = new Rellax('.rellax-header');
-
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('landing-page');
     var navbar = document.getElementsByTagName('nav')[0];
