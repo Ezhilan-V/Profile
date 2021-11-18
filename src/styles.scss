@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @use '~@angular/material' as mat;
 @import "~bootstrap/scss/bootstrap.scss";
+@import "assets/sass/now-ui-kit.scss";
 
 @include mat.core();
 
@@ -15,3 +16,4 @@ $my-theme: mat.define-light-theme((
 ));
 
 @include mat.all-component-themes($my-theme);
+

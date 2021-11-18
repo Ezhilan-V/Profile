@@ -8,10 +8,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MaterialModule } from './material.module';
 import { ComponentsModule } from './components/components.module';
+import { ProfileModule } from './profile/profile.module';
+import { ProfileComponent } from './components/profile/profile.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        ProfileComponent,
+        FooterComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -20,7 +25,8 @@ import { ComponentsModule } from './components/components.module';
         RouterModule,
         AppRoutingModule,
         ComponentsModule,
-        MaterialModule
+        MaterialModule,
+        ProfileModule
     ],
     providers: [],
     bootstrap: [AppComponent]
