@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.scss']
 })
-export class ProjectCardComponent implements OnInit {
+export class ProjectCardComponent {
 
   constructor() { }
   projects = {
@@ -37,7 +37,7 @@ export class ProjectCardComponent implements OnInit {
         description: `I had been the team captain and driver for a Go-kart
         design and endurance event.We have build the entire
         vehicle from scratch in record time for the event.`,
-        imageUrl: "assets/img/bg1.jpg"
+        imageUrl: "assets/img/bfkct2018.jpg"
       },
       {
         title: "Provisioning of Q-gate",
@@ -47,17 +47,13 @@ export class ProjectCardComponent implements OnInit {
         the data of various defects and performed root cause
         analysis and modified the production line and added
         Quality Gate to improve effiency of the unit.`,
-        imageUrl: "assets/img/bg2.jpg"
+        imageUrl: "assets/img/ashokLeyland.jpg"
       },
       {
         title: "Variable Adaptive Suspension",
         role: "Project Lead",
-        description: "lorem",
-        imageUrl: "assets/img/bg3.jpg"
-      },
-    ]
+        description: "Compared the performance characteristics of passive and active suspension and created a active suspension model to have optimum performance in both real world roads and race tracks using Smart materials",
+        imageUrl: "assets/img/vasSimulation.jpg"
+      }]
   }
-  ngOnInit(): void {
-  }
-
 }

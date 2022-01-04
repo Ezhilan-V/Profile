@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'landing', component: LandingComponent },
     { path: 'profile', component: ProfileComponent },
     { path: 'resume', component: ResumeComponent },
-    { path: 'others', component: FooterComponent },
+    { path: 'others', component: KnowMoreComponent },
     { path: '**', redirectTo: 'profile', pathMatch: 'full' },
 ];
 

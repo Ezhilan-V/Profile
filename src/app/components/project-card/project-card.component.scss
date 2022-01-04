@@ -48,10 +48,12 @@ mat-card-header {
 mat-card {
     img {
         width: 120%;
-        margin-right: -20px;
+        // margin-right: -20px;
         aspect-ratio: 4/3;
+
         // clip-path: circle(83.1% at 65% 110%);
     }
+    height: 100%;
 }
 .project-icons {
     position: relative;
@@ -64,4 +66,5 @@ mat-card {
     min-width: 350px;
     max-width: 600px;
     margin: 10px;
+    height: 100%;
 }
