@@ -5,19 +5,12 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { AgmCoreModule } from '@agm/core';
-import { LandingComponent } from './landing/landing.component';
-import { ProfileComponent } from './profile/profile.component';
 import { MaterialModule } from '../material.module';
-import { AppRoutingModule } from '../app.routing';
 import { RouterModule } from '@angular/router';
-import { KnowMoreComponent } from './know-more/know-more.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
-    exports:[LandingComponent,
-        // ProfileComponent,
-        KnowMoreComponent,
-        ProjectCardComponent],
+    exports:[ ProjectCardComponent],
     imports: [
         CommonModule,
         FormsModule,
@@ -32,9 +25,6 @@ import { ProjectCardComponent } from './project-card/project-card.component';
         })
     ],
     declarations: [
-        LandingComponent,
-        // ProfileComponent,
-        KnowMoreComponent,
         ProjectCardComponent
     ]
 })

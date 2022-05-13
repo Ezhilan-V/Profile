@@ -8,15 +8,19 @@ import { NgxSpinnerService } from '../../../node_modules/ngx-spinner';
 })
 export class ResumeComponent implements OnInit {
 
-  constructor(
-    private spinner: NgxSpinnerService
-  ) { }
-
+  constructor(  ) { }
   ngOnInit() {
-    this.spinner.show();
-    setTimeout(() => {
-        this.spinner.hide();
-    }, 2000);
+    var body = document.getElementsByTagName('body')[0];
+    body.classList.add('profile-page');
+    var navbar = document.getElementsByTagName('nav')[0];
+    navbar.classList.add('navbar-transparent');
+      }
+  ngOnDestroy() {
+    var body = document.getElementsByTagName('body')[0];
+    body.classList.remove('profile-page');
+    var navbar = document.getElementsByTagName('nav')[0];
+    navbar.classList.remove('navbar-transparent');
   }
+ 
 
 }

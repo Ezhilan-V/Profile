@@ -3,172 +3,29 @@
         <h4 class="title text-center">My Projects</h4>
         <ngb-tabset [justify]="'center'" type="pills"
             class="nav nav-pills nav-pills-primary  nav-pills-just-icons justify-content-center tab-space">
-            <ngb-tab>
+            <ngb-tab *ngFor="let proj of projects">
                 <ng-template class="project-icons" ngbTabTitle>
-                    <i class="now-ui-icons transportation_bus-front-12" ngbTooltip="Automobile"></i>
+                    <i [class]="proj.icon" [ngbTooltip]="proj.name"></i>
                 </ng-template>
                 <ng-template ngbTabContent>
                     <div class="row">
                         <div class="col-md-10 ml-auto mr-auto">
                             <div class="row collections card-deck">
-                                <div class="card project-card" *ngFor="let project of projects.automobile">
-                                    <!-- <div class="card-header">
-                                        <h4 class="card-title text-primary">{{project.title}}</h4>
-                                        <h5 class="card-subtitle text-secondary"><b>Role :</b>
-                                            {{project.role}} </h5>
+                                <div class="card project-card" *ngFor="let project of proj.projects">
+                                    <div class="text-primary card-header" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div>{{project.title}}</div>
+                                        <div class="sub-title">Role : {{project.role}}
+                                        </div>
                                     </div>
-                                    <img class="card-img-top" [src]="project.imageUrl"
-                                        onerror="this.src = 'assets/images/gif.gif'" alt="Card image"
-                                        style="width:100%">
-                                    <div class="card-body">
+                                    <img [src]="project.imageUrl" class="project-card-images card-img-top"
+                                        onerror="this.src = 'assets/images/gif.gif'" [alt]="project.title"
+                                        data-aos="fade-up" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body " data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
                                         <p>
                                             {{project.description}}
                                         </p>
-                                    </div> -->
-                                    <mat-card class="" style="height:100% ;">
-                                        <mat-card-header class="text-primary" data-aos="fade-left" data-aos-offset="50"
-                                            data-aos-duration="500">
-                                            <mat-card-title>{{project.title}}</mat-card-title>
-                                            <mat-card-subtitle>Role : {{project.role}}
-                                            </mat-card-subtitle>
-                                        </mat-card-header>
-                                        <div>
-
-                                            <img mat-card-image [src]="project.imageUrl"
-                                                onerror="this.src = 'assets/images/gif.gif'" [alt]="project.title" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500">
-                                        </div>
-                                        <mat-card-content data-aos="fade-right" data-aos-offset="50"
-                                            data-aos-duration="500">
-                                            <p>
-                                                {{project.description}}
-                                            </p>
-                                        </mat-card-content>
-                                        <mat-card-actions>
-                                            <a href="#button" class="btn btn-primary btn-round btn-lg">Know
-                                                More
-                                            </a>
-                                        </mat-card-actions>
-                                    </mat-card>
-                                </div>
-                                <!-- </div> -->
-                                <!-- <div class="col-md-6">
-                                    <mat-card class="example-card">
-                                        <mat-card-header class="text-primary">
-                                            <mat-card-title>Supra - 2018</mat-card-title>
-                                            <mat-card-subtitle>Role : Team captain
-                                            </mat-card-subtitle>
-                                        </mat-card-header>
-                                        <img mat-card-image src="assets/img/supra2018.jpg"
-                                            alt="Photo of a Shiba Inu">
-                                        <mat-card-content>
-                                            <p>
-                                                I was the Team captain for our college formula students
-                                                team. We as a team avoided our prior mistakes and
-                                                improved our ranking.I primarly concentrated on the
-                                                fesibilty and technical aspects of the vehicle
-                                                manufacturing process.
-                                            </p>
-                                        </mat-card-content>
-                                        <mat-card-actions>
-                                            <a href="#button" class="btn btn-primary btn-round btn-lg">Know
-                                                More
-                                            </a>
-                                        </mat-card-actions>
-                                    </mat-card>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-card class="example-card">
-                                        <mat-card-header class="text-primary">
-                                            <mat-card-title>BFKCT - 2018</mat-card-title>
-                                            <mat-card-subtitle>Role : Team Captian/Driver
-                                            </mat-card-subtitle>
-                                        </mat-card-header>
-                                        <div>
-
-                                            <img mat-card-image src="assets/img/supra2017.jpg"
-                                                alt="Photo of a Shiba Inu">
-                                        </div>
-                                        <mat-card-content>
-                                            <p>
-                                                I had been the team captain and driver for a Go-kart
-                                                design and endurance event.We have build the entire
-                                                vehicle from scratch in record time for the event.
-                                            </p>
-                                        </mat-card-content>
-                                        <mat-card-actions>
-                                            <a href="#button" class="btn btn-primary btn-round btn-lg">Know
-                                                More
-                                            </a>
-                                        </mat-card-actions>
-                                    </mat-card>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-card class="example-card">
-                                        <mat-card-header class="text-primary">
-                                            <mat-card-title>Provisioning of Q-gate in engine Production
-                                                unit in ashok-leyland </mat-card-title>
-                                            <mat-card-subtitle>Role : Intern
-                                            </mat-card-subtitle>
-                                        </mat-card-header>
-                                        <img mat-card-image src="assets/img/supra2018.jpg"
-                                            alt="Photo of a Shiba Inu">
-                                        <mat-card-content>
-                                            <p>
-                                                I was an intern in Ashok Leyland in the quality control
-                                                department. During my time as an intern we have analysed
-                                                the data of various defects and performed root cause
-                                                analysis and modified the production line and added
-                                                Quality Gate to improve effiency of the unit.
-                                            </p>
-                                        </mat-card-content>
-                                        <mat-card-actions>
-                                            <a href="#button" class="btn btn-primary btn-round btn-lg">Know
-                                                More
-                                            </a>
-                                        </mat-card-actions>
-                                    </mat-card>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-            </ngb-tab>
-            <ngb-tab>
-                <ng-template class="project-icons" ngbTabTitle>
-                    <i class="now-ui-icons tech_laptop" ngbTooltip="Computer  Science"></i>
-                </ng-template>
-                <ng-template ngbTabContent>
-                    <div class="row">
-                        <div class="col-md-10 ml-auto mr-auto">
-                            <div class="row collections">
-                                <div class="col-md-6">
-                                    <img src="assets/img/bg6.jpg" class="img-raised">
-                                    <img src="assets/img/bg11.jpg" alt="" class="img-raised">
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="assets/img/bg7.jpg" alt="" class="img-raised">
-                                    <img src="assets/img/bg8.jpg" alt="" class="img-raised">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-            </ngb-tab>
-            <ngb-tab>
-                <ng-template class="project-icons" ngbTabTitle>
-                    <i class="now-ui-icons users_single-02" ngbTooltip="Personal"> </i>
-                </ng-template>
-                <ng-template ngbTabContent>
-                    <div class="row">
-                        <div class="col-md-10 ml-auto mr-auto">
-                            <div class="row collections">
-                                <div class="col-md-6">
-                                    <img src="assets/img/bg3.jpg" alt="" class="img-raised">
-                                    <img src="assets/img/bg8.jpg" alt="" class="img-raised">
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="assets/img/bg7.jpg" alt="" class="img-raised">
-                                    <img src="assets/img/bg6.jpg" class="img-raised">
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -10,13 +10,11 @@ import { MaterialModule } from './material.module';
 import { ComponentsModule } from './components/components.module';
 import { ProfileModule } from './profile/profile.module';
 import { ProfileComponent } from './components/profile/profile.component';
-import { FooterComponent } from './footer/footer.component';
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
-        ProfileComponent,
-        FooterComponent
+        ProfileComponent
     ],
     imports: [
         BrowserAnimationsModule,

@@ -8,13 +8,13 @@ import { ProfileService } from '../profile.service';
 })
 export class AboutComponent implements OnInit {
 about1
-about2
+professionalSummary:string[]
 
 constructor(private profileService:ProfileService) { }
 
   ngOnInit() {
     this.about1 =  this.profileService.about
-    this.about2 =  this.profileService.about2
+    this.professionalSummary =  this.profileService.professionalSummary
   }
 
 }

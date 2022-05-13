@@ -2,69 +2,43 @@
     position: absolute;
     z-index: 5;
     margin-left: auto;
-    text-align: right;
-    width: 60%;
-    height: 30em;
-    // top: 25px;
-    right: 0;
-    color: rgb(250, 250, 250);
-    background: rgba(248, 242, 242, 0.856);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-    text-shadow: 0px 0px 25px 12px #ffffff;
-    // clip
-    clip-path: polygon(0 0, 100% 0%, 100% 46%, 75% 24%, 38% 19%);
-    h4{
-        margin: 0 0 0 10px;
-        border: 2px solid red;
-        border-radius: 50%/25%;
-    }
-}
-mat-card {
-    // height: 100%;
-    // margin: 10px;
-    // background-color: $dark-background;
-    // color: $white-color;
-    img {
-        width: 120%;
-        margin-right: -20px;
-        aspect-ratio: 4/3;
-        // clip-path: circle(83.1% at 65% 110%);
-    }
-}
-mat-card-header {
-    position: absolute;
-    z-index: 5;
-    margin-left: auto;
-    top: 25px;
-    right: 20px;
+    top: 15px;
+    right: -5px;
     color: rgb(250, 250, 250);
     background: rgba(255, 255, 255, 0.856);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
-    text-shadow: 0px 0px 25px 12px #ffffff;
-    // clip
+    text-shadow: 0px 0px 5px hsl(0, 0, 100%), 0 0 1em hsl(0, 0, 50%), 0 0 0.2em hsl(0, 0%, 100%);
+    text-align: right;
 }
-mat-card {
-    img {
-        width: 120%;
-        // margin-right: -20px;
-        aspect-ratio: 4/3;
-
-        // clip-path: circle(83.1% at 65% 110%);
-    }
-    height: 100%;
+.project-card-images {
+    width: 120%;
+    padding: 0px;
+    margin: 0px;
+    width: 120%;
+    margin-right: -20px;
+    aspect-ratio: 4/3;
 }
 .project-icons {
     position: relative;
+}
+.sub-title {
+    font-weight: 400;
+    color: hsl(0, 0%, 30%);
+    text-shadow: 0px 0px 5px hsl(0, 0, 100%), 0 0 1em hsl(0, 0, 50%), 0 0 0.2em hsl(0, 0%, 100%);
 }
 .project-icons :hover {
     top: -10px;
     box-shadow: 2px 2px 10px 10px black;
 }
-.project-card{
+.project-card {
     min-width: 350px;
     max-width: 600px;
     margin: 10px;
     height: 100%;
+}
+.card-body {
+    padding: 0;
+    margin: -25px 10px -10px;
+    text-align: justify;
 }
