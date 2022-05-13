@@ -113,12 +113,16 @@ li {
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   position: relative;
   background: #fff;
-  box-shadow: 1px 1px 10px 1px #a3a4a7;
   border-radius: 4px;
-  margin-left: 60px;
+  margin-left: 45px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  width: 90%;
+  height: auto;
+  h5{
+    padding: 5px;
+  }
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
@@ -184,17 +188,17 @@ li {
 
 .mat-expansion-panel {
   div{
-    display:grid;
-    grid-template-columns: 150px auto;
-    align-items: start;
     h4 {
       color: #ec5453;
       padding: 5px;
-      // margin-bottom: 15px/;
+      margin-bottom: 0px;
+      margin-top: 10px;
     }
     content: {
+      display: block;
       text-align: left;
-      margin-top: -10px;
+      padding: 10px;
+      margin-top: -25px !important;
     };
   }
   }

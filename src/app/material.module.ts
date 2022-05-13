@@ -24,6 +24,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const materialModules = [
   CdkTreeModule,
@@ -51,7 +52,8 @@ const materialModules = [
   MatButtonToggleModule,
   OverlayModule,
   PortalModule,
-  MatChipsModule
+  MatChipsModule,
+  MatTooltipModule
 ];
 
 @NgModule({

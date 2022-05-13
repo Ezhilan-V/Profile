@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
-import { ReferenceComponent } from './reference/reference.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './profile.component';
 import { MaterialModule } from '../material.module';
@@ -19,7 +18,6 @@ import { MaterialModule } from '../material.module';
     AboutComponent,
     ExperienceComponent,
     EducationComponent,
-    ReferenceComponent,
     ContactComponent,
   ],
   providers: [     ]

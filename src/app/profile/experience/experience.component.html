@@ -3,25 +3,33 @@
         <div class="h4 text-center mb-4 title">Work Experience</div>
         <div class="colorlib-narrow-content">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 card">
+                    <br>
+                    <h3 class="text-primary " style="margin-bottom: 2px;">Infosys techologies limited , Mysore</h3>
+                    <h5 class="text-secondary">May 2019 - present</h5>
                     <div class="timeline-centered">
                         <article *ngFor="let exp of workexp" class="timeline-entry animate-box" data-aos="fade-right"
                             data-aos-offset="50" data-aos-duration="500">
                             <div class="timeline-entry-inner">
-                                <div class="timeline-icon color-2">
+                                <div class="timeline-icon color-2"
+                                    [matTooltip]="exp.timeline" matTooltipPosition="right">
                                     {{exp.id}}
                                 </div>
-                                <mat-expansion-panel class="timeline-label">
+                                <mat-expansion-panel class="timeline-label card">
                                     <mat-expansion-panel-header>
                                         <mat-panel-title>
-                                            <h2>{{exp.project}}<span>- &nbsp;{{exp.timeline}}, {{exp.unit}}</span></h2>
+                                           {{exp.project}} 
                                         </mat-panel-title>
                                     </mat-expansion-panel-header>
-                                    <br>
                                     <div>
-                                    <h4>Role</h4><p class="content">{{exp.role}} </p>
+                                        <h4>Unit</h4>
+                                        <p class="content">{{exp.unit}} </p>
                                     </div>
-                                    <div>    
+                                    <div>
+                                        <h4>Role</h4>
+                                        <p class="content">{{exp.role}} </p>
+                                    </div>
+                                    <div>
                                         <h4>Description</h4>
                                         <p class="content">{{exp.summary}} </p>
                                     </div>
@@ -32,10 +40,16 @@
                                             </mat-chip>
                                         </mat-chip-list>
                                     </div>
-                                    <ul>
-                                        <li *ngFor="let work of exp.work">{{work}}</li>
-                                    </ul>
+                                    <div>
+                                        <h4>Responsibilities</h4>
+                                        <ul>
+                                            <li *ngFor="let work of exp.work">{{work}}</li>
+                                        </ul>
+                                    </div>
+                                    
                                 </mat-expansion-panel>
+
+
                             </div>
                         </article>
                     </div>
